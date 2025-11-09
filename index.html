@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFarm360 - Agricultural Advisory Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome" class="screen active">
+        <!-- Header Navigation -->
+        <header class="welcome-header-nav">
+            <div class="header-container">
+                <div class="header-brand">
+                    <h2>🌾 SmartFarm360</h2>
+                </div>
+                
+                <nav class="header-nav">
+                    <a href="#" class="nav-link">Crop Management</a>
+                    <a href="#" class="nav-link">Advisory</a>
+                    <a href="#" class="nav-link">Storage</a>
+                    <a href="#" class="nav-link">Financial</a>
+                    <a href="#" class="nav-link">Direct Sales</a>
+                </nav>
+                
+                <div class="header-auth">
+                    <button class="btn btn--outline btn--sm" id="headerLoginBtn">Login</button>
+                    <button class="btn btn--primary btn--sm" id="headerRegisterBtn">Register</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="welcome-container">
+            <div class="welcome-hero">
+                <h1>🌾 SmartFarm360</h1>
+                <p>Comprehensive Agricultural Advisory Platform</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌾</div>
+                    <h3>Crop Management</h3>
+                    <p>Track crop progress, plan seasons, and monitor health with smart analytics</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Advisory</h3>
+                    <p>Get weather updates, market prices, and expert agricultural advice</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏪</div>
+                    <h3>Storage Solutions</h3>
+                    <p>Find warehouses, track storage capacity, and manage quality</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Financial Support</h3>
+                    <p>Access government schemes, loans, subsidies, and insurance</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Direct Marketplace</h3>
+                    <p>Sell directly to buyers, cooperatives, and consumers</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Easy to Use</h3>
+                    <p>Simple, farmer-friendly interface designed for everyone</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="welcome-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>SmartFarm360</h4>
+                        <p>Empowering farmers with technology and knowledge for sustainable agriculture.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Crop Management</li>
+                            <li>Market Advisory</li>
+                            <li>Storage Solutions</li>
+                            <li>Financial Support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li>Help Center</li>
+                            <li>Documentation</li>
+                            <li>Training Videos</li>
+                            <li>Community Forum</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Get in Touch</h4>
+                        <p>Need assistance or want to partner with us?</p>
+                        <button class="btn btn--primary btn--sm" id="contactUsBtn">Contact Us</button>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SmartFarm360. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Registration Screen -->
+    <div id="register" class="screen">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Create Account</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label class="form-label">User Type</label>
+                        <select class="form-control" id="userType" name="userType" required>
+                            <option value="">Select User Type</option>
+                            <option value="farmer">Farmer</option>
+                            <option value="buyer">Buyer</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" name="location" placeholder="City, State" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full-width">Register</button>
+                </form>
+                
+                <p class="auth-switch">Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login" class="screen">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Welcome Back</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+                </form>
+                
+                <p class="auth-switch">Don't have an account? <a href="#" id="switchToRegister">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="screen">
+        <!-- Fixed Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <h3>🌾 SmartFarm360</h3>
+            </div>
+            
+            <div class="navbar-menu" id="navMenu">
+                <button class="nav-item active" data-module="overview">📊 Dashboard</button>
+                <button class="nav-item" data-module="crops">🌾 Crop Management</button>
+                <button class="nav-item" data-module="advisory">📡 Advisory</button>
+                <button class="nav-item" data-module="storage">🏪 Storage</button>
+                <button class="nav-item" data-module="finance">💰 Finance</button>
+                <button class="nav-item" data-module="marketplace">🛒 Marketplace</button>
+                <button class="nav-item" data-module="pest-detection">🔍 Pest Detection</button>
+                <button class="nav-item" data-module="personalized-advisory">📋 Personal Advisory</button>
+                <button class="nav-item" data-module="soil-health">🌱 Soil Health</button>
+                <button class="nav-item" data-module="alerts">🚨 Alerts</button>
+                <button class="nav-item" data-module="marketplace-integration">🔗 Connections</button>
+                <button class="nav-item" data-module="chatbot">🤖 AI Assistant</button>
+                <button class="nav-item" data-module="community">🌾 Community</button>
+                <button class="nav-item" data-module="price-forecast">📈 Price Forecast</button>
+            </div>
+            
+            <div class="navbar-actions">
+                <button class="btn btn--outline btn--sm" id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Module Container -->
+        <div class="main-container">
+            <div id="module-content">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for support and partnerships</p>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            
+            <form id="contactForm" class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" id="contactName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="contactEmail" name="email" placeholder="Enter your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Phone (Optional)</label>
+                    <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Subject *</label>
+                    <input type="text" class="form-control" id="contactSubject" name="subject" placeholder="What is this regarding?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Message *</label>
+                    <textarea class="form-control" id="contactMessage" name="message" placeholder="Tell us how we can help you..." rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-overlay" id="successOverlay"></div>
+        <div class="modal-content modal-content--small">
+            <div class="modal-header">
+                <h3>✅ Message Sent!</h3>
+                <button class="modal-close" id="successClose">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                <button class="btn btn--primary btn--full-width" id="successOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div id="fab" class="fab" onclick="showChatbot()">
+        <span>🤖</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
